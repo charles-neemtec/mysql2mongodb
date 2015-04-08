@@ -1,0 +1,60 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Mysql to Mongo Migration</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+<body>
+<input type="hidden" value="mysql" id="page">
+    <div align="center">
+        <h3 class="heading">Source : MYSQL</h3>
+        <div class="form_border">
+            <div class="formDiv">
+                <div class="leftColn">Host</div>
+                <div class="middleColn">:</div>
+                <div class="rightColn">
+                    <input type="text" id="host" class="form-control" value="">
+                </div>
+            </div>
+            <div class="formDiv">
+                <div class="leftColn">Port</div>
+                <div class="middleColn">:</div>
+                <div class="rightColn">
+                    <input type="integer" id="port"  class="form-control" value="">
+                </div>
+            </div>
+            <div class="formDiv">
+                <div class="leftColn">Database</div>
+                <div class="middleColn">:</div>
+                <div class="rightColn">
+                    <input type="text" id="database" class="form-control" value="">
+                </div>
+            </div>
+            <div class="formDiv">
+                <div class="leftColn">User</div>
+                <div class="middleColn">:</div>
+                <div class="rightColn">
+                    <input type="text" id="user" class="form-control" value="">
+                </div>
+            </div>
+            <div class="formDiv">
+                <div class="leftColn">Password</div>
+                <div class="middleColn">:</div>
+                <div class="rightColn">
+                    <input type="password" id="password" class="form-control" value="">
+                </div>
+            </div>
+            <div class="btnRow">
+                <button type="button" class="btn btn-success btn btn btn-primary btn-block" onclick="connectMysqlDB()">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+<div id="loading"><div>
+</body>
+</html>

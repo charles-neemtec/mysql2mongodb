@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mysql to Mongo Migration</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/common.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js" type="text/javascript"></script>
+</head>
+<body>
+
+<input type="hidden" value="list" id="page"/>
+<form id="frm1" action="summary" method="post" onsubmit="return iscCheckboxSelected(event)">
+    <div class="heading">
+        <h3>List Of Tables</h3>
+    </div>
+    <div class="selectAll">
+        <input type="checkbox" onchange="selectAll(this,'table')"> Select All
+    </div>
+    <div class="listWholeDiv">
+            <% result.forEach( function(item) { %>
+             <div class="listDiv">
+                 <input type="checkbox" value="<%=item%>" name="table"/>
+                 <%=item%>
+             </div>
+            <% }) %>
+    </div>
+    <div align="center">
+        <div class="btnRow">
+            <button type="submit" class="btn btn-success btn btn btn-primary btn-block" id="next" >
+                Next
+            </button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+

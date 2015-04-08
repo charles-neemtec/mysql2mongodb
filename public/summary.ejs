@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mysql to Mongo Migration</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="heading">
+    <h3>List Of Tables</h3>
+</div>
+<div class="listWholeDiv">
+    <input id="tableCount" type="hidden" value="<%=data.length%>"/>
+    <% data.forEach(function(item) { %>
+        <div class="listDiv">
+             <span><%=item%></span>
+             <span id="<%=item%>" style="float:right" class="status">Waiting...</span>
+       </div>
+    <% }) %>
+</div>
+<div class="statusWholeDiv" align="center">
+    <div class="progressDiv">
+        <div class="progress" style="height:10px;">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" id="progress" aria-valuemax="100" style="width:0%;">
+          </div>
+        </div>
+    </div>
+    <div class="progress_percent">
+        <span id="completed">0</span>
+        <span>/</span>
+        <span id="count">0</span>
+        <span id="percentage"></span>
+    </div>
+</div>
+
+<div align="center">
+    <div class="btnRow">
+        <button type="button" id="migrate" class="btn btn-success btn btn btn-primary btn-block" onclick="doMigrate();">
+            Migrate
+        </button>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
